@@ -1,6 +1,9 @@
 package com.vijay.config;
 
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
+import org.springframework.ai.chat.memory.ChatMemory;
+import org.springframework.ai.chat.memory.MessageWindowChatMemory;
 import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.ai.mcp.SyncMcpToolCallbackProvider;
 import org.springframework.ai.ollama.OllamaChatModel;
@@ -15,10 +18,18 @@ class ChatConfig {
 
     // Gemini client (cloud)
 
+    @Bean
+    ChatMemory chatMemory() {
+        // Keeps the last N messages per conversationId (in-memory only)
+        return MessageWindowChatMemory.builder()
+                .maxMessages(20) // tune as needed
+                .build();
+    }
+
     @Primary // optional; only if something injects a plain ChatClient
     @Bean(name = "geminiClient")
     ChatClient geminiClient(OpenAiChatModel openAiChatModel,
-                            SyncMcpToolCallbackProvider mcp) {
+                            SyncMcpToolCallbackProvider mcp,ChatMemory chatMemory) {
 
         var opts = OpenAiChatOptions.builder()
                 .toolChoice("auto")
@@ -26,15 +37,17 @@ class ChatConfig {
 
         return ChatClient.builder(openAiChatModel)
                 .defaultOptions(opts)
+                .defaultAdvisors(MessageChatMemoryAdvisor.builder(chatMemory).build())
                 .defaultToolCallbacks(mcp.getToolCallbacks())
                 .build();
     }
 
     @Bean(name = "ollamaClient")
     ChatClient ollamaClient(OllamaChatModel ollamaChatModel,
-                            SyncMcpToolCallbackProvider mcp) {
+                            SyncMcpToolCallbackProvider mcp,ChatMemory chatMemory) {
 
         return ChatClient.builder(ollamaChatModel)
+                .defaultAdvisors(MessageChatMemoryAdvisor.builder(chatMemory).build())
                 .defaultToolCallbacks(mcp.getToolCallbacks())
                 .build();
     }
