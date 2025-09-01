@@ -1,17 +1,23 @@
 package com.vijay.controller;
 
+
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.memory.ChatMemory;
-import org.springframework.ai.chat.prompt.ChatOptions;
-import org.springframework.ai.openai.OpenAiChatModel;
+import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.ai.openai.OpenAiChatOptions;
 import org.springframework.ai.openai.api.OpenAiApi;
+import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Arrays;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/ai")
@@ -22,12 +28,34 @@ class ChatBoatController {
 
     private final ChatClient gemini; // from ChatConfig
     private final ChatClient ollama; // from ChatConfig
+    private final String systemPrompt; // <-- now dynamic
 
     ChatBoatController(@Qualifier("geminiClient") ChatClient gemini,
-                       @Qualifier("ollamaClient") ChatClient ollama) {
+                       @Qualifier("ollamaClient") ChatClient ollama,
+                       ToolCallbackProvider toolProvider) {   // ✅ inject toolProvider
         this.gemini = gemini;
         this.ollama = ollama;
+
+        // Load system prompt template
+        PromptTemplate template = new PromptTemplate(new ClassPathResource("prompts/tool-only.st"));
+
+        // Build dynamic tool list
+        String toolList = Arrays.stream(toolProvider.getToolCallbacks())
+                .map(cb -> {
+                    String name = cleanToolName(cb.getToolDefinition().name());
+                    return "- " + name + " → " + cb.getToolDefinition().description();
+                })
+                .collect(Collectors.joining("\n"));
+
+        // Render system prompt with tool list injected
+        this.systemPrompt = template.render(Map.of("toolList", toolList));
     }
+
+    private String cleanToolName(String fullName) {
+        int lastUnderscore = fullName.lastIndexOf("_");
+        return (lastUnderscore >= 0) ? fullName.substring(lastUnderscore + 1) : fullName;
+    }
+
 
     // --- DTOs ---
     record ChatRequest(
@@ -95,21 +123,13 @@ class ChatBoatController {
                 : http.getSession(true).getId();
 
         var prompt = client.prompt()
-                .system("""
-                    You have MCP tools available:
-                    - createNote(title, body)
-                    - listFaqs()
-                    Prefer calling these tools when relevant.
-                    """)
+                .system(systemPrompt)
                 .user(req.message())
                 .advisors(a -> a.param(ChatMemory.CONVERSATION_ID, conversationId));
 
         // --- Model override ---
         if (model != null && !model.isBlank()) {
             if ("ollama".equals(provider)) {
-                prompt = prompt.options(ChatOptions.builder()
-                        .model(model)
-                        .build());
             } else {
                 prompt = prompt.options(OpenAiChatOptions.builder()
                         .model(model)

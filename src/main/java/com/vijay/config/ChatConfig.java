@@ -1,5 +1,6 @@
 package com.vijay.config;
 
+import io.modelcontextprotocol.client.McpSyncClient;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.memory.ChatMemory;
@@ -8,16 +9,31 @@ import org.springframework.ai.mcp.SyncMcpToolCallbackProvider;
 import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.ai.openai.OpenAiChatOptions;
+import org.springframework.ai.tool.ToolCallbackProvider;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.List;
+
 @Configuration
 class ChatConfig {
 
     private static final Logger logger = LoggerFactory.getLogger(ChatConfig.class);
+
+
+    // Merge all MCP servers
+    @Bean
+    @Primary
+    public ToolCallbackProvider mcpToolCallbackProvider(List<McpSyncClient> mcpSyncClients) {
+        return new LoggingMcpToolCallbackProvider(mcpSyncClients);
+    }
+
+
+
 
     // Gemini client (cloud)
     @Bean
@@ -31,7 +47,7 @@ class ChatConfig {
     @Primary
     @Bean(name = "geminiClient")
     ChatClient geminiClient(OpenAiChatModel openAiChatModel,
-                            SyncMcpToolCallbackProvider mcp, ChatMemory chatMemory) {
+                            ToolCallbackProvider mcp, ChatMemory chatMemory) {
 
         var opts = OpenAiChatOptions.builder()
                 .toolChoice("auto")
@@ -48,7 +64,7 @@ class ChatConfig {
 
     @Bean(name = "ollamaClient")
     ChatClient ollamaClient(OllamaChatModel ollamaChatModel,
-                            SyncMcpToolCallbackProvider mcp, ChatMemory chatMemory) {
+                            ToolCallbackProvider mcp, ChatMemory chatMemory) {
 
         logger.info("Creating Ollama Chat Client");
 
