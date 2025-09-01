@@ -1,6 +1,7 @@
 package com.vijay.controller;
 
 
+import com.vijay.tool.ToolUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.memory.ChatMemory;
@@ -39,21 +40,17 @@ class ChatBoatController {
         // Load system prompt template
         PromptTemplate template = new PromptTemplate(new ClassPathResource("prompts/tool-only.st"));
 
-        // Build dynamic tool list
         String toolList = Arrays.stream(toolProvider.getToolCallbacks())
                 .map(cb -> {
-                    String name = cleanToolName(cb.getToolDefinition().name());
-                    return "- " + name + " → " + cb.getToolDefinition().description();
+                    var def = cb.getToolDefinition();
+                    String name = ToolUtils.cleanToolName(def.name());
+                    String desc = def.description();
+                    String example = ToolUtils.generateExample(name, def.inputSchema());
+                    return "- " + name + " → " + desc + "\n   Example: " + example;
                 })
-                .collect(Collectors.joining("\n"));
+                .collect(Collectors.joining("\n\n"));
 
-        // Render system prompt with tool list injected
         this.systemPrompt = template.render(Map.of("toolList", toolList));
-    }
-
-    private String cleanToolName(String fullName) {
-        int lastUnderscore = fullName.lastIndexOf("_");
-        return (lastUnderscore >= 0) ? fullName.substring(lastUnderscore + 1) : fullName;
     }
 
 

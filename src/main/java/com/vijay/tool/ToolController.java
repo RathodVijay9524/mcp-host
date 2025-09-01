@@ -18,20 +18,18 @@ public class ToolController {
         this.toolProvider = toolProvider;
     }
 
-    record ToolHelp(String name, String description) {}
+    record ToolHelp(String name, String description, String example) {}
 
     @GetMapping
-    public List<ToolHelp> listTools() {
+    public List<ToolHelp> listToolsWithExamples() {
         return Arrays.stream(toolProvider.getToolCallbacks())
-                .map(cb -> new ToolHelp(
-                        cleanToolName(cb.getToolDefinition().name()),
-                        cb.getToolDefinition().description()
-                ))
+                .map(cb -> {
+                    var def = cb.getToolDefinition();
+                    String name = ToolUtils.cleanToolName(def.name());
+                    String desc = def.description();
+                    String example = ToolUtils.generateExample(name, def.inputSchema());
+                    return new ToolHelp(name, desc, example);
+                })
                 .toList();
-    }
-
-    private String cleanToolName(String fullName) {
-        int lastUnderscore = fullName.lastIndexOf("_");
-        return (lastUnderscore >= 0) ? fullName.substring(lastUnderscore + 1) : fullName;
     }
 }
