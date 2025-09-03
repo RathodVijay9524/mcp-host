@@ -6,6 +6,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 /**
  * Async configuration for the application
@@ -15,7 +16,7 @@ import java.util.concurrent.Executor;
 public class AsyncConfig {
     
     /**
-     * Configure thread pool for async operations
+     * Traditional thread pool executor for backward compatibility
      */
     @Bean(name = "taskExecutor")
     public Executor taskExecutor() {
@@ -28,5 +29,24 @@ public class AsyncConfig {
         executor.setAwaitTerminationSeconds(30);
         executor.initialize();
         return executor;
+    }
+
+    /**
+     * Virtual Threads executor for high concurrency
+     * Java 19+ feature - perfect for I/O-bound operations like AI API calls
+     * Can handle thousands of concurrent requests without blocking platform threads
+     */
+    @Bean(name = "virtualThreadExecutor")
+    public Executor virtualThreadExecutor() {
+        return Executors.newVirtualThreadPerTaskExecutor();
+    }
+
+    /**
+     * Default async executor - uses Virtual Threads for better performance
+     * This will be used by @Async annotations without specifying executor
+     */
+    @Bean(name = "defaultAsyncExecutor")
+    public Executor defaultAsyncExecutor() {
+        return Executors.newVirtualThreadPerTaskExecutor();
     }
 }

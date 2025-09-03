@@ -1862,3 +1862,866 @@ org.springframework.web.servlet.resource.NoResourceFoundException: No static res
 2025-09-03 13:32:25.184 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
 2025-09-03 13:32:25.216 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
 2025-09-03 13:32:25.311 [restartedMain] INFO  com.vijay.McpHostApplication - Started McpHostApplication in 27.928 seconds (process running for 29.686)
+2025-09-03 14:02:07.840 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-03 14:02:07.857 [Thread-1] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-03 14:02:07.867 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:02:07.897 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-09-03 14:02:07.897 [Thread-1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:02:07.946 [boundedElastic-2] DEBUG i.m.c.transport.StdioClientTransport - Initiating graceful shutdown
+2025-09-03 14:02:08.082 [parallel-6] DEBUG i.m.c.transport.StdioClientTransport - Sending TERM to process
+2025-09-03 14:02:08.126 [ForkJoinPool.commonPool-worker-2] WARN  i.m.c.transport.StdioClientTransport - Process terminated with code 1
+2025-09-03 14:02:08.401 [restartedMain] INFO  com.vijay.McpHostApplication - Starting McpHostApplication using Java 24.0.1 with PID 22488 (E:\ai_projects\MCP_apps\mcp-host\target\classes started by Admin in E:\ai_projects\MCP_apps\mcp-host)
+2025-09-03 14:02:08.403 [restartedMain] INFO  com.vijay.McpHostApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-03 14:02:10.006 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-03 14:02:10.006 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-03 14:02:10.028 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2025-09-03 14:02:10.628 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-03 14:02:10.628 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:02:10.628 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-03 14:02:10.628 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03 14:02:10.707 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-03 14:02:10.707 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2296 ms
+2025-09-03 14:02:13.925 [pool-11-thread-1] INFO  i.m.client.McpAsyncClient - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AI_Coding_Assistant, version=1.13.1] and Instructions null
+2025-09-03 14:02:13.984 [pool-13-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:02:14.100 [pool-13-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:02:14.505 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Gemini Chat Client
+2025-09-03 14:02:14.519 [pool-13-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:02:14.676 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Ollama Chat Client
+2025-09-03 14:02:14.681 [pool-13-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:02:14.746 [restartedMain] INFO  com.vijay.service.CachedToolService - Generating tool list for system prompt (cache miss)
+2025-09-03 14:02:14.751 [pool-13-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:02:14.778 [restartedMain] INFO  com.vijay.service.CachedToolService - Counting tools from MCP servers (cache miss)
+2025-09-03 14:02:14.778 [pool-13-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:02:14.792 [restartedMain] INFO  com.vijay.config.SystemPromptConfig - Generated system prompt with 41 tools
+2025-09-03 14:02:17.087 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-09-03 14:02:17.122 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-09-03 14:02:17.163 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:02:17.182 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-09-03 14:02:17.226 [restartedMain] INFO  com.vijay.McpHostApplication - Started McpHostApplication in 9.081 seconds (process running for 1821.601)
+2025-09-03 14:02:17.227 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-09-03 14:02:28.740 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-03 14:02:28.750 [Thread-13] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-03 14:02:28.760 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:02:28.814 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-09-03 14:02:28.814 [Thread-13] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:02:28.820 [boundedElastic-2] DEBUG i.m.c.transport.StdioClientTransport - Initiating graceful shutdown
+2025-09-03 14:02:28.935 [parallel-4] DEBUG i.m.c.transport.StdioClientTransport - Sending TERM to process
+2025-09-03 14:02:28.943 [parallel-4] WARN  i.m.c.transport.StdioClientTransport - Process terminated with code 1
+2025-09-03 14:02:28.944 [parallel-4] DEBUG i.m.c.transport.StdioClientTransport - Graceful shutdown completed
+2025-09-03 14:02:29.237 [restartedMain] INFO  com.vijay.McpHostApplication - Starting McpHostApplication using Java 24.0.1 with PID 22488 (E:\ai_projects\MCP_apps\mcp-host\target\classes started by Admin in E:\ai_projects\MCP_apps\mcp-host)
+2025-09-03 14:02:29.240 [restartedMain] INFO  com.vijay.McpHostApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-03 14:02:30.649 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-03 14:02:30.649 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-03 14:02:30.683 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2025-09-03 14:02:31.247 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-03 14:02:31.247 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:02:31.247 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-03 14:02:31.247 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03 14:02:31.294 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-03 14:02:31.294 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2045 ms
+2025-09-03 14:02:33.927 [pool-16-thread-1] INFO  i.m.client.McpAsyncClient - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AI_Coding_Assistant, version=1.13.1] and Instructions null
+2025-09-03 14:02:33.960 [pool-18-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:02:33.980 [pool-18-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:02:34.412 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Gemini Chat Client
+2025-09-03 14:02:34.416 [pool-18-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:02:34.537 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Ollama Chat Client
+2025-09-03 14:02:34.539 [pool-18-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:02:34.578 [restartedMain] INFO  com.vijay.service.CachedToolService - Generating tool list for system prompt (cache miss)
+2025-09-03 14:02:34.582 [pool-18-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:02:34.598 [restartedMain] INFO  com.vijay.service.CachedToolService - Counting tools from MCP servers (cache miss)
+2025-09-03 14:02:34.599 [pool-18-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:02:34.611 [restartedMain] INFO  com.vijay.config.SystemPromptConfig - Generated system prompt with 41 tools
+2025-09-03 14:02:36.908 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-09-03 14:02:36.926 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-09-03 14:02:36.977 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:02:36.989 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-09-03 14:02:37.017 [restartedMain] INFO  com.vijay.McpHostApplication - Started McpHostApplication in 8.048 seconds (process running for 1841.391)
+2025-09-03 14:02:37.022 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-09-03 14:03:22.510 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-09-03 14:03:22.512 [Thread-25] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-03 14:03:22.513 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:03:22.535 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-09-03 14:03:22.536 [Thread-25] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:03:22.538 [boundedElastic-2] DEBUG i.m.c.transport.StdioClientTransport - Initiating graceful shutdown
+2025-09-03 14:03:22.694 [restartedMain] INFO  com.vijay.McpHostApplication - Starting McpHostApplication using Java 24.0.1 with PID 22488 (E:\ai_projects\MCP_apps\mcp-host\target\classes started by Admin in E:\ai_projects\MCP_apps\mcp-host)
+2025-09-03 14:03:22.694 [restartedMain] INFO  com.vijay.McpHostApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-03 14:03:23.558 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-03 14:03:23.558 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-03 14:03:23.574 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2025-09-03 14:03:24.021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-03 14:03:24.022 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:03:24.023 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-03 14:03:24.024 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03 14:03:24.085 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-03 14:03:24.086 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1388 ms
+2025-09-03 14:03:25.966 [pool-21-thread-1] INFO  i.m.client.McpAsyncClient - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AI_Coding_Assistant, version=1.13.1] and Instructions null
+2025-09-03 14:03:25.986 [pool-23-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:03:26.000 [pool-23-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:03:26.246 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Gemini Chat Client
+2025-09-03 14:03:26.249 [pool-23-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:03:26.345 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Ollama Chat Client
+2025-09-03 14:03:26.348 [pool-23-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:03:26.372 [restartedMain] INFO  com.vijay.service.CachedToolService - Generating tool list for system prompt (cache miss)
+2025-09-03 14:03:26.374 [pool-23-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:03:26.384 [restartedMain] INFO  com.vijay.service.CachedToolService - Counting tools from MCP servers (cache miss)
+2025-09-03 14:03:26.389 [pool-23-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:03:26.393 [restartedMain] INFO  com.vijay.config.SystemPromptConfig - Generated system prompt with 41 tools
+2025-09-03 14:03:28.011 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-09-03 14:03:28.028 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-09-03 14:03:28.065 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:03:28.068 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-09-03 14:03:28.079 [restartedMain] INFO  com.vijay.McpHostApplication - Started McpHostApplication in 5.473 seconds (process running for 1892.454)
+2025-09-03 14:03:28.081 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-09-03 14:03:34.460 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+2025-09-03 14:03:34.463 [Thread-37] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-03 14:03:34.464 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:03:34.484 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-09-03 14:03:34.485 [Thread-37] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:03:34.488 [boundedElastic-2] DEBUG i.m.c.transport.StdioClientTransport - Initiating graceful shutdown
+2025-09-03 14:03:34.630 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.yaml.snakeyaml.constructor.DuplicateKeyException: while constructing a mapping
+ in 'reader', line 1, column 1:
+    server:
+    ^
+found duplicate key spring
+ in 'reader', line 16, column 1:
+    spring:
+    ^
+
+	at org.yaml.snakeyaml.constructor.SafeConstructor.processDuplicateKeys(SafeConstructor.java:119)
+	at org.yaml.snakeyaml.constructor.SafeConstructor.flattenMapping(SafeConstructor.java:71)
+	at org.yaml.snakeyaml.constructor.SafeConstructor.flattenMapping(SafeConstructor.java:66)
+	at org.yaml.snakeyaml.constructor.SafeConstructor.constructMapping2ndStep(SafeConstructor.java:204)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructMapping(BaseConstructor.java:553)
+	at org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlMap.construct(SafeConstructor.java:592)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:265)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:248)
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.constructObject(OriginTrackedYamlLoader.java:119)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:202)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:167)
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.getData(OriginTrackedYamlLoader.java:99)
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:530)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:203)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:169)
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84)
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36)
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96)
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132)
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:129)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:132)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:115)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:353)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.vijay.McpHostApplication.main(McpHostApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2025-09-03 14:05:33.158 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.yaml.snakeyaml.constructor.DuplicateKeyException: while constructing a mapping
+ in 'reader', line 1, column 1:
+    server:
+    ^
+found duplicate key spring
+ in 'reader', line 16, column 1:
+    spring:
+    ^
+
+	at org.yaml.snakeyaml.constructor.SafeConstructor.processDuplicateKeys(SafeConstructor.java:119)
+	at org.yaml.snakeyaml.constructor.SafeConstructor.flattenMapping(SafeConstructor.java:71)
+	at org.yaml.snakeyaml.constructor.SafeConstructor.flattenMapping(SafeConstructor.java:66)
+	at org.yaml.snakeyaml.constructor.SafeConstructor.constructMapping2ndStep(SafeConstructor.java:204)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructMapping(BaseConstructor.java:553)
+	at org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlMap.construct(SafeConstructor.java:592)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:265)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:248)
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.constructObject(OriginTrackedYamlLoader.java:119)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:202)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:167)
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.getData(OriginTrackedYamlLoader.java:99)
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:530)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:203)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:169)
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84)
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36)
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96)
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132)
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:129)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:132)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:115)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:353)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.vijay.McpHostApplication.main(McpHostApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2025-09-03 14:05:42.957 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.yaml.snakeyaml.constructor.DuplicateKeyException: while constructing a mapping
+ in 'reader', line 1, column 1:
+    server:
+    ^
+found duplicate key spring
+ in 'reader', line 16, column 1:
+    spring:
+    ^
+
+	at org.yaml.snakeyaml.constructor.SafeConstructor.processDuplicateKeys(SafeConstructor.java:119)
+	at org.yaml.snakeyaml.constructor.SafeConstructor.flattenMapping(SafeConstructor.java:71)
+	at org.yaml.snakeyaml.constructor.SafeConstructor.flattenMapping(SafeConstructor.java:66)
+	at org.yaml.snakeyaml.constructor.SafeConstructor.constructMapping2ndStep(SafeConstructor.java:204)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructMapping(BaseConstructor.java:553)
+	at org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlMap.construct(SafeConstructor.java:592)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:265)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:248)
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.constructObject(OriginTrackedYamlLoader.java:119)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:202)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:167)
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.getData(OriginTrackedYamlLoader.java:99)
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:530)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:203)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:169)
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84)
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36)
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96)
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132)
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:129)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:132)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:115)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:353)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.vijay.McpHostApplication.main(McpHostApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2025-09-03 14:10:51.498 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.yaml.snakeyaml.constructor.DuplicateKeyException: while constructing a mapping
+ in 'reader', line 1, column 1:
+    server:
+    ^
+found duplicate key spring
+ in 'reader', line 16, column 1:
+    spring:
+    ^
+
+	at org.yaml.snakeyaml.constructor.SafeConstructor.processDuplicateKeys(SafeConstructor.java:119)
+	at org.yaml.snakeyaml.constructor.SafeConstructor.flattenMapping(SafeConstructor.java:71)
+	at org.yaml.snakeyaml.constructor.SafeConstructor.flattenMapping(SafeConstructor.java:66)
+	at org.yaml.snakeyaml.constructor.SafeConstructor.constructMapping2ndStep(SafeConstructor.java:204)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructMapping(BaseConstructor.java:553)
+	at org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlMap.construct(SafeConstructor.java:592)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:265)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:248)
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.constructObject(OriginTrackedYamlLoader.java:119)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:202)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:167)
+	at org.springframework.boot.env.OriginTrackedYamlLoader$OriginTrackingConstructor.getData(OriginTrackedYamlLoader.java:99)
+	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:530)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:203)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:169)
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84)
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36)
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96)
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132)
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:129)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:132)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:115)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:353)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.vijay.McpHostApplication.main(McpHostApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2025-09-03 14:12:12.085 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-09-03 14:12:12.158 [restartedMain] INFO  com.vijay.McpHostApplication - Starting McpHostApplication using Java 24.0.1 with PID 21468 (E:\ai_projects\MCP_apps\mcp-host\target\classes started by Admin in E:\ai_projects\MCP_apps\mcp-host)
+2025-09-03 14:12:12.162 [restartedMain] INFO  com.vijay.McpHostApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-03 14:12:12.314 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-03 14:12:12.315 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-03 14:12:14.972 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-03 14:12:14.980 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-03 14:12:15.049 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 0 Redis repository interfaces.
+2025-09-03 14:12:17.023 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-03 14:12:17.047 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:12:17.050 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-03 14:12:17.051 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03 14:12:17.141 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-03 14:12:17.143 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4827 ms
+2025-09-03 14:12:20.466 [pool-2-thread-1] INFO  i.m.client.McpAsyncClient - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AI_Coding_Assistant, version=1.13.1] and Instructions null
+2025-09-03 14:12:20.533 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:12:20.604 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:12:21.420 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Gemini Chat Client
+2025-09-03 14:12:21.440 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:12:21.855 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Ollama Chat Client
+2025-09-03 14:12:21.860 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:12:21.972 [restartedMain] INFO  com.vijay.service.CachedToolService - Generating tool list for system prompt (cache miss)
+2025-09-03 14:12:21.976 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:12:22.102 [restartedMain] INFO  com.vijay.service.CachedToolService - Counting tools from MCP servers (cache miss)
+2025-09-03 14:12:22.103 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:12:22.114 [restartedMain] INFO  com.vijay.config.SystemPromptConfig - Generated system prompt with 41 tools
+2025-09-03 14:12:26.733 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-09-03 14:12:26.768 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-09-03 14:12:26.883 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:12:26.897 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-09-03 14:12:26.927 [restartedMain] INFO  com.vijay.McpHostApplication - Started McpHostApplication in 15.981 seconds (process running for 17.027)
+2025-09-03 14:12:36.584 [tomcat-handler-0] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-03 14:12:36.585 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-03 14:12:36.587 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-09-03 14:12:36.620 [tomcat-handler-0] INFO  c.v.c.VirtualThreadController - Getting Virtual Thread information
+2025-09-03 14:12:45.814 [tomcat-handler-1] INFO  c.v.c.VirtualThreadController - Testing Virtual Threads concurrency with 5 requests
+2025-09-03 14:12:45.814 [tomcat-handler-1] INFO  c.v.service.VirtualThreadChatService - Processing 5 chat requests concurrently with Virtual Threads
+2025-09-03 14:12:45.815 [tomcat-handler-1] INFO  c.v.service.VirtualThreadChatService - Processing chat request with Virtual Thread for conversation: test-e4523c7f-7976-4a2f-9704-2fca91307f25
+2025-09-03 14:12:45.815 [tomcat-handler-1] INFO  c.vijay.service.impl.ChatServiceImpl - Processing chat request for conversation: test-e4523c7f-7976-4a2f-9704-2fca91307f25
+2025-09-03 14:12:45.816 [tomcat-handler-1] INFO  c.v.service.impl.AIClientServiceImpl - Getting ChatClient for provider: gemini, model: gemini-1.5-flash, hasCustomApiKey: false, hasCustomBaseUrl: false
+2025-09-03 14:12:45.816 [tomcat-handler-1] INFO  c.v.service.impl.AIClientServiceImpl - Using default Gemini client
+2025-09-03 14:12:47.785 [tomcat-handler-1] INFO  c.vijay.service.impl.ChatServiceImpl - Successfully generated response for conversation: test-e4523c7f-7976-4a2f-9704-2fca91307f25
+2025-09-03 14:12:47.787 [tomcat-handler-1] INFO  c.v.service.VirtualThreadChatService - Successfully processed chat request with Virtual Thread for conversation: test-e4523c7f-7976-4a2f-9704-2fca91307f25
+2025-09-03 14:12:47.789 [tomcat-handler-1] INFO  c.v.service.VirtualThreadChatService - Processing chat request with Virtual Thread for conversation: test-b6d0b17e-6dd5-45b0-b4a0-747931a5eff3
+2025-09-03 14:12:47.790 [tomcat-handler-1] INFO  c.vijay.service.impl.ChatServiceImpl - Processing chat request for conversation: test-b6d0b17e-6dd5-45b0-b4a0-747931a5eff3
+2025-09-03 14:12:47.792 [tomcat-handler-1] INFO  c.v.service.impl.AIClientServiceImpl - Getting ChatClient for provider: gemini, model: gemini-1.5-flash, hasCustomApiKey: false, hasCustomBaseUrl: false
+2025-09-03 14:12:47.794 [tomcat-handler-1] INFO  c.v.service.impl.AIClientServiceImpl - Using default Gemini client
+2025-09-03 14:12:48.810 [tomcat-handler-1] INFO  c.vijay.service.impl.ChatServiceImpl - Successfully generated response for conversation: test-b6d0b17e-6dd5-45b0-b4a0-747931a5eff3
+2025-09-03 14:12:48.811 [tomcat-handler-1] INFO  c.v.service.VirtualThreadChatService - Successfully processed chat request with Virtual Thread for conversation: test-b6d0b17e-6dd5-45b0-b4a0-747931a5eff3
+2025-09-03 14:12:48.812 [tomcat-handler-1] INFO  c.v.service.VirtualThreadChatService - Processing chat request with Virtual Thread for conversation: test-833bf7c6-999f-4414-8b84-4799852cfc56
+2025-09-03 14:12:48.813 [tomcat-handler-1] INFO  c.vijay.service.impl.ChatServiceImpl - Processing chat request for conversation: test-833bf7c6-999f-4414-8b84-4799852cfc56
+2025-09-03 14:12:48.813 [tomcat-handler-1] INFO  c.v.service.impl.AIClientServiceImpl - Getting ChatClient for provider: gemini, model: gemini-1.5-flash, hasCustomApiKey: false, hasCustomBaseUrl: false
+2025-09-03 14:12:48.815 [tomcat-handler-1] INFO  c.v.service.impl.AIClientServiceImpl - Using default Gemini client
+2025-09-03 14:12:49.830 [tomcat-handler-1] INFO  c.vijay.service.impl.ChatServiceImpl - Successfully generated response for conversation: test-833bf7c6-999f-4414-8b84-4799852cfc56
+2025-09-03 14:12:49.830 [tomcat-handler-1] INFO  c.v.service.VirtualThreadChatService - Successfully processed chat request with Virtual Thread for conversation: test-833bf7c6-999f-4414-8b84-4799852cfc56
+2025-09-03 14:12:49.831 [tomcat-handler-1] INFO  c.v.service.VirtualThreadChatService - Processing chat request with Virtual Thread for conversation: test-eb927a9b-d8a3-485e-b162-e5532948e0eb
+2025-09-03 14:12:49.831 [tomcat-handler-1] INFO  c.vijay.service.impl.ChatServiceImpl - Processing chat request for conversation: test-eb927a9b-d8a3-485e-b162-e5532948e0eb
+2025-09-03 14:12:49.832 [tomcat-handler-1] INFO  c.v.service.impl.AIClientServiceImpl - Getting ChatClient for provider: gemini, model: gemini-1.5-flash, hasCustomApiKey: false, hasCustomBaseUrl: false
+2025-09-03 14:12:49.832 [tomcat-handler-1] INFO  c.v.service.impl.AIClientServiceImpl - Using default Gemini client
+2025-09-03 14:12:50.682 [tomcat-handler-1] INFO  c.vijay.service.impl.ChatServiceImpl - Successfully generated response for conversation: test-eb927a9b-d8a3-485e-b162-e5532948e0eb
+2025-09-03 14:12:50.684 [tomcat-handler-1] INFO  c.v.service.VirtualThreadChatService - Successfully processed chat request with Virtual Thread for conversation: test-eb927a9b-d8a3-485e-b162-e5532948e0eb
+2025-09-03 14:12:50.685 [tomcat-handler-1] INFO  c.v.service.VirtualThreadChatService - Processing chat request with Virtual Thread for conversation: test-5e4b4b7e-303f-4a66-9283-703bc0a3cd32
+2025-09-03 14:12:50.686 [tomcat-handler-1] INFO  c.vijay.service.impl.ChatServiceImpl - Processing chat request for conversation: test-5e4b4b7e-303f-4a66-9283-703bc0a3cd32
+2025-09-03 14:12:50.687 [tomcat-handler-1] INFO  c.v.service.impl.AIClientServiceImpl - Getting ChatClient for provider: gemini, model: gemini-1.5-flash, hasCustomApiKey: false, hasCustomBaseUrl: false
+2025-09-03 14:12:50.690 [tomcat-handler-1] INFO  c.v.service.impl.AIClientServiceImpl - Using default Gemini client
+2025-09-03 14:12:51.610 [tomcat-handler-1] INFO  c.vijay.service.impl.ChatServiceImpl - Successfully generated response for conversation: test-5e4b4b7e-303f-4a66-9283-703bc0a3cd32
+2025-09-03 14:12:51.613 [tomcat-handler-1] INFO  c.v.service.VirtualThreadChatService - Successfully processed chat request with Virtual Thread for conversation: test-5e4b4b7e-303f-4a66-9283-703bc0a3cd32
+2025-09-03 14:12:51.617 [tomcat-handler-1] INFO  c.v.c.VirtualThreadController - Virtual Threads concurrency test completed: 5 requests in 5801 ms
+2025-09-03 14:13:17.394 [tomcat-handler-3] INFO  c.v.c.VirtualThreadController - Received async chat request with Virtual Threads
+2025-09-03 14:13:17.397 [virtual-100] INFO  c.v.service.VirtualThreadChatService - Processing chat request with Virtual Thread for conversation: 6f406e1a-78ae-4a87-bec5-4f9acc2e77bc
+2025-09-03 14:13:17.398 [virtual-100] INFO  c.vijay.service.impl.ChatServiceImpl - Processing chat request for conversation: 6f406e1a-78ae-4a87-bec5-4f9acc2e77bc
+2025-09-03 14:13:17.398 [virtual-100] INFO  c.v.service.impl.AIClientServiceImpl - Getting ChatClient for provider: gemini, model: gemini-1.5-flash, hasCustomApiKey: false, hasCustomBaseUrl: false
+2025-09-03 14:13:17.398 [virtual-100] INFO  c.v.service.impl.AIClientServiceImpl - Using default Gemini client
+2025-09-03 14:13:19.131 [virtual-100] INFO  c.vijay.service.impl.ChatServiceImpl - Successfully generated response for conversation: 6f406e1a-78ae-4a87-bec5-4f9acc2e77bc
+2025-09-03 14:13:19.133 [virtual-100] INFO  c.v.service.VirtualThreadChatService - Successfully processed chat request with Virtual Thread for conversation: 6f406e1a-78ae-4a87-bec5-4f9acc2e77bc
+2025-09-03 14:13:19.134 [virtual-100] INFO  c.v.c.VirtualThreadController - Successfully processed async chat request for conversation: 6f406e1a-78ae-4a87-bec5-4f9acc2e77bc
+2025-09-03 14:13:58.096 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-03 14:13:58.102 [Thread-1] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-03 14:13:58.104 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:13:58.124 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-09-03 14:13:58.126 [Thread-1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:13:58.143 [loomBoundedElastic-2] DEBUG i.m.c.transport.StdioClientTransport - Initiating graceful shutdown
+2025-09-03 14:13:58.315 [restartedMain] INFO  com.vijay.McpHostApplication - Starting McpHostApplication using Java 24.0.1 with PID 21468 (E:\ai_projects\MCP_apps\mcp-host\target\classes started by Admin in E:\ai_projects\MCP_apps\mcp-host)
+2025-09-03 14:13:58.316 [restartedMain] INFO  com.vijay.McpHostApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-03 14:13:59.417 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-03 14:13:59.418 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-03 14:13:59.433 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2025-09-03 14:13:59.653 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-09-03 14:13:59.733 [restartedMain] INFO  com.vijay.McpHostApplication - Starting McpHostApplication using Java 24.0.1 with PID 10164 (E:\ai_projects\MCP_apps\mcp-host\target\classes started by Admin in E:\ai_projects\MCP_apps\mcp-host)
+2025-09-03 14:13:59.734 [restartedMain] INFO  com.vijay.McpHostApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-03 14:13:59.836 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-03 14:13:59.836 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-03 14:14:00.267 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-03 14:14:00.268 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:14:00.285 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-03 14:14:00.294 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03 14:14:00.597 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-03 14:14:00.608 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2289 ms
+2025-09-03 14:14:02.657 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-03 14:14:02.663 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-03 14:14:02.740 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38 ms. Found 0 Redis repository interfaces.
+2025-09-03 14:14:03.312 [pool-10-thread-1] INFO  i.m.client.McpAsyncClient - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AI_Coding_Assistant, version=1.13.1] and Instructions null
+2025-09-03 14:14:03.339 [pool-12-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:03.352 [pool-12-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:03.625 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Gemini Chat Client
+2025-09-03 14:14:03.631 [pool-12-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:03.765 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Ollama Chat Client
+2025-09-03 14:14:03.767 [pool-12-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:03.792 [restartedMain] INFO  com.vijay.service.CachedToolService - Generating tool list for system prompt (cache miss)
+2025-09-03 14:14:03.795 [pool-12-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:03.802 [restartedMain] INFO  com.vijay.service.CachedToolService - Counting tools from MCP servers (cache miss)
+2025-09-03 14:14:03.805 [pool-12-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:03.811 [restartedMain] INFO  com.vijay.config.SystemPromptConfig - Generated system prompt with 41 tools
+2025-09-03 14:14:04.802 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-03 14:14:04.820 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:14:04.823 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-03 14:14:04.823 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03 14:14:04.917 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-03 14:14:04.918 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5081 ms
+2025-09-03 14:14:07.295 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-09-03 14:14:07.317 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-09-03 14:14:07.381 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:14:07.394 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-09-03 14:14:07.412 [restartedMain] INFO  com.vijay.McpHostApplication - Started McpHostApplication in 9.179 seconds (process running for 117.511)
+2025-09-03 14:14:07.416 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-09-03 14:14:08.185 [pool-2-thread-1] INFO  i.m.client.McpAsyncClient - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AI_Coding_Assistant, version=1.13.1] and Instructions null
+2025-09-03 14:14:08.235 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:08.295 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:09.092 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Gemini Chat Client
+2025-09-03 14:14:09.107 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:09.381 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Ollama Chat Client
+2025-09-03 14:14:09.384 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:09.464 [restartedMain] INFO  com.vijay.service.CachedToolService - Generating tool list for system prompt (cache miss)
+2025-09-03 14:14:09.466 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:09.541 [restartedMain] INFO  com.vijay.service.CachedToolService - Counting tools from MCP servers (cache miss)
+2025-09-03 14:14:09.542 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:09.548 [restartedMain] INFO  com.vijay.config.SystemPromptConfig - Generated system prompt with 41 tools
+2025-09-03 14:14:12.761 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-09-03 14:14:12.788 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-09-03 14:14:12.879 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:14:12.894 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-09-03 14:14:12.901 [loomBoundedElastic-2] DEBUG i.m.c.transport.StdioClientTransport - Initiating graceful shutdown
+2025-09-03 14:14:12.950 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-03 14:14:12.985 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-09-03 14:14:13.002 [parallel-6] DEBUG i.m.c.transport.StdioClientTransport - Sending TERM to process
+2025-09-03 14:14:13.012 [parallel-6] WARN  i.m.c.transport.StdioClientTransport - Process terminated with code 1
+2025-09-03 14:14:13.039 [parallel-6] DEBUG i.m.c.transport.StdioClientTransport - Graceful shutdown completed
+2025-09-03 14:14:27.979 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-09-03 14:14:28.045 [restartedMain] INFO  com.vijay.McpHostApplication - Starting McpHostApplication using Java 24.0.1 with PID 12412 (E:\ai_projects\MCP_apps\mcp-host\target\classes started by Admin in E:\ai_projects\MCP_apps\mcp-host)
+2025-09-03 14:14:28.048 [restartedMain] INFO  com.vijay.McpHostApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-03 14:14:28.153 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-03 14:14:28.154 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-03 14:14:30.480 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-03 14:14:30.486 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-03 14:14:30.537 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2025-09-03 14:14:32.357 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-03 14:14:32.379 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:14:32.382 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-03 14:14:32.382 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03 14:14:32.469 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-03 14:14:32.469 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4314 ms
+2025-09-03 14:14:34.984 [pool-2-thread-1] INFO  i.m.client.McpAsyncClient - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AI_Coding_Assistant, version=1.13.1] and Instructions null
+2025-09-03 14:14:35.046 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:35.128 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:35.912 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Gemini Chat Client
+2025-09-03 14:14:35.939 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:36.198 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Ollama Chat Client
+2025-09-03 14:14:36.201 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:36.289 [restartedMain] INFO  com.vijay.service.CachedToolService - Generating tool list for system prompt (cache miss)
+2025-09-03 14:14:36.291 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:36.366 [restartedMain] INFO  com.vijay.service.CachedToolService - Counting tools from MCP servers (cache miss)
+2025-09-03 14:14:36.368 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:14:36.378 [restartedMain] INFO  com.vijay.config.SystemPromptConfig - Generated system prompt with 41 tools
+2025-09-03 14:14:40.312 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-09-03 14:14:40.360 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-09-03 14:14:40.573 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:14:40.593 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-09-03 14:14:40.603 [loomBoundedElastic-2] DEBUG i.m.c.transport.StdioClientTransport - Initiating graceful shutdown
+2025-09-03 14:14:40.668 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-03 14:14:40.706 [parallel-6] DEBUG i.m.c.transport.StdioClientTransport - Sending TERM to process
+2025-09-03 14:14:40.710 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-09-03 14:14:40.711 [parallel-6] WARN  i.m.c.transport.StdioClientTransport - Process terminated with code 1
+2025-09-03 14:14:40.726 [parallel-6] DEBUG i.m.c.transport.StdioClientTransport - Graceful shutdown completed
+2025-09-03 14:15:34.212 [tomcat-handler-0] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-03 14:15:34.212 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-03 14:15:34.214 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-09-03 14:15:49.515 [tomcat-handler-1] INFO  c.v.c.VirtualThreadController - Getting Virtual Thread information
+2025-09-03 14:16:21.074 [tomcat-handler-3] INFO  c.v.controller.ChatBoatController - Received chat request with provider: gemini, model: gemini-1.5-flash, hasApiKey: false, hasBaseUrl: true
+2025-09-03 14:16:21.074 [tomcat-handler-3] INFO  c.vijay.service.ResilientChatService - Processing resilient chat request for conversation: 8007309b-9f6a-4da4-8fd4-0f4c72933780
+2025-09-03 14:16:21.077 [ForkJoinPool.commonPool-worker-2] INFO  c.vijay.service.impl.ChatServiceImpl - Processing chat request for conversation: 8007309b-9f6a-4da4-8fd4-0f4c72933780
+2025-09-03 14:16:21.078 [ForkJoinPool.commonPool-worker-2] INFO  c.v.service.impl.AIClientServiceImpl - Getting ChatClient for provider: gemini, model: gemini-1.5-flash, hasCustomApiKey: false, hasCustomBaseUrl: true
+2025-09-03 14:16:21.079 [ForkJoinPool.commonPool-worker-2] INFO  c.v.service.impl.AIClientServiceImpl - Using default Gemini client
+2025-09-03 14:16:22.542 [ForkJoinPool.commonPool-worker-2] INFO  c.vijay.service.impl.ChatServiceImpl - Successfully generated response for conversation: 8007309b-9f6a-4da4-8fd4-0f4c72933780
+2025-09-03 14:16:22.548 [tomcat-handler-3] INFO  c.v.controller.ChatBoatController - Successfully processed chat request for conversation: 8007309b-9f6a-4da4-8fd4-0f4c72933780
+2025-09-03 14:21:24.127 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-03 14:21:24.138 [Thread-13] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-03 14:21:24.141 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:21:24.204 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-09-03 14:21:24.206 [Thread-13] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:21:24.217 [loomBoundedElastic-4] DEBUG i.m.c.transport.StdioClientTransport - Initiating graceful shutdown
+2025-09-03 14:21:24.321 [parallel-4] DEBUG i.m.c.transport.StdioClientTransport - Sending TERM to process
+2025-09-03 14:21:24.324 [ForkJoinPool.commonPool-worker-4] WARN  i.m.c.transport.StdioClientTransport - Process terminated with code 1
+2025-09-03 14:21:24.324 [ForkJoinPool.commonPool-worker-4] DEBUG i.m.c.transport.StdioClientTransport - Graceful shutdown completed
+2025-09-03 14:21:24.428 [restartedMain] INFO  com.vijay.McpHostApplication - Starting McpHostApplication using Java 24.0.1 with PID 21468 (E:\ai_projects\MCP_apps\mcp-host\target\classes started by Admin in E:\ai_projects\MCP_apps\mcp-host)
+2025-09-03 14:21:24.430 [restartedMain] INFO  com.vijay.McpHostApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-03 14:21:25.239 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-03 14:21:25.239 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-03 14:21:25.244 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-09-03 14:21:25.718 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-03 14:21:25.719 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:21:25.719 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-03 14:21:25.720 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03 14:21:25.768 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-03 14:21:25.770 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1335 ms
+2025-09-03 14:21:28.734 [pool-15-thread-1] INFO  i.m.client.McpAsyncClient - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AI_Coding_Assistant, version=1.13.1] and Instructions null
+2025-09-03 14:21:28.758 [pool-17-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:21:28.770 [pool-17-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:21:29.316 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Gemini Chat Client
+2025-09-03 14:21:29.319 [pool-17-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:21:29.438 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Ollama Chat Client
+2025-09-03 14:21:29.441 [pool-17-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:21:29.470 [restartedMain] INFO  com.vijay.service.CachedToolService - Generating tool list for system prompt (cache miss)
+2025-09-03 14:21:29.472 [pool-17-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:21:29.484 [restartedMain] INFO  com.vijay.service.CachedToolService - Counting tools from MCP servers (cache miss)
+2025-09-03 14:21:29.486 [pool-17-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:21:29.491 [restartedMain] INFO  com.vijay.config.SystemPromptConfig - Generated system prompt with 41 tools
+2025-09-03 14:21:32.357 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-09-03 14:21:32.379 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-09-03 14:21:32.434 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:21:32.437 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-09-03 14:21:32.450 [restartedMain] INFO  com.vijay.McpHostApplication - Started McpHostApplication in 8.115 seconds (process running for 562.549)
+2025-09-03 14:21:32.454 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-09-03 14:21:33.782 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-03 14:21:33.789 [Thread-25] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-03 14:21:33.791 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:21:33.829 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-09-03 14:21:33.831 [Thread-25] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:21:33.837 [loomBoundedElastic-6] DEBUG i.m.c.transport.StdioClientTransport - Initiating graceful shutdown
+2025-09-03 14:21:33.942 [parallel-2] DEBUG i.m.c.transport.StdioClientTransport - Sending TERM to process
+2025-09-03 14:21:33.946 [ForkJoinPool.commonPool-worker-4] WARN  i.m.c.transport.StdioClientTransport - Process terminated with code 1
+2025-09-03 14:21:33.947 [ForkJoinPool.commonPool-worker-4] DEBUG i.m.c.transport.StdioClientTransport - Graceful shutdown completed
+2025-09-03 14:21:34.084 [restartedMain] INFO  com.vijay.McpHostApplication - Starting McpHostApplication using Java 24.0.1 with PID 21468 (E:\ai_projects\MCP_apps\mcp-host\target\classes started by Admin in E:\ai_projects\MCP_apps\mcp-host)
+2025-09-03 14:21:34.085 [restartedMain] INFO  com.vijay.McpHostApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-03 14:21:34.667 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-03 14:21:34.668 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-03 14:21:34.674 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-09-03 14:21:34.980 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-03 14:21:34.980 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:21:34.981 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-03 14:21:34.981 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03 14:21:35.009 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-03 14:21:35.010 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 920 ms
+2025-09-03 14:21:37.147 [pool-20-thread-1] INFO  i.m.client.McpAsyncClient - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AI_Coding_Assistant, version=1.13.1] and Instructions null
+2025-09-03 14:21:37.170 [pool-22-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:21:37.177 [pool-22-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:21:37.392 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Gemini Chat Client
+2025-09-03 14:21:37.394 [pool-22-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:21:37.463 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Ollama Chat Client
+2025-09-03 14:21:37.465 [pool-22-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:21:37.486 [restartedMain] INFO  com.vijay.service.CachedToolService - Generating tool list for system prompt (cache miss)
+2025-09-03 14:21:37.488 [pool-22-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:21:37.495 [restartedMain] INFO  com.vijay.service.CachedToolService - Counting tools from MCP servers (cache miss)
+2025-09-03 14:21:37.497 [pool-22-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:21:37.502 [restartedMain] INFO  com.vijay.config.SystemPromptConfig - Generated system prompt with 41 tools
+2025-09-03 14:21:40.008 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-09-03 14:21:40.034 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-09-03 14:21:40.102 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:21:40.104 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-09-03 14:21:40.121 [restartedMain] INFO  com.vijay.McpHostApplication - Started McpHostApplication in 6.149 seconds (process running for 570.22)
+2025-09-03 14:21:40.123 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-09-03 14:22:10.665 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-03 14:22:10.667 [Thread-37] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-03 14:22:10.668 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:22:10.688 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-09-03 14:22:10.689 [Thread-37] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:22:10.691 [loomBoundedElastic-8] DEBUG i.m.c.transport.StdioClientTransport - Initiating graceful shutdown
+2025-09-03 14:22:10.792 [parallel-8] DEBUG i.m.c.transport.StdioClientTransport - Sending TERM to process
+2025-09-03 14:22:10.793 [parallel-8] WARN  i.m.c.transport.StdioClientTransport - Process terminated with code 1
+2025-09-03 14:22:10.794 [parallel-8] DEBUG i.m.c.transport.StdioClientTransport - Graceful shutdown completed
+2025-09-03 14:22:10.795 [restartedMain] INFO  com.vijay.McpHostApplication - Starting McpHostApplication using Java 24.0.1 with PID 21468 (E:\ai_projects\MCP_apps\mcp-host\target\classes started by Admin in E:\ai_projects\MCP_apps\mcp-host)
+2025-09-03 14:22:10.796 [restartedMain] INFO  com.vijay.McpHostApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-03 14:22:11.389 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-03 14:22:11.390 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-03 14:22:11.395 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-09-03 14:22:11.641 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-03 14:22:11.642 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:22:11.643 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-03 14:22:11.643 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03 14:22:11.667 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-03 14:22:11.668 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 868 ms
+2025-09-03 14:22:13.356 [pool-25-thread-1] INFO  i.m.client.McpAsyncClient - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AI_Coding_Assistant, version=1.13.1] and Instructions null
+2025-09-03 14:22:13.373 [pool-27-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:22:13.380 [pool-27-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:22:13.549 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Gemini Chat Client
+2025-09-03 14:22:13.551 [pool-27-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:22:13.627 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Ollama Chat Client
+2025-09-03 14:22:13.630 [pool-27-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:22:13.648 [restartedMain] INFO  com.vijay.service.CachedToolService - Generating tool list for system prompt (cache miss)
+2025-09-03 14:22:13.649 [pool-27-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:22:13.657 [restartedMain] INFO  com.vijay.service.CachedToolService - Counting tools from MCP servers (cache miss)
+2025-09-03 14:22:13.659 [pool-27-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:22:13.663 [restartedMain] INFO  com.vijay.config.SystemPromptConfig - Generated system prompt with 41 tools
+2025-09-03 14:22:15.874 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-09-03 14:22:15.934 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-09-03 14:22:16.046 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:22:16.052 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-09-03 14:22:16.067 [restartedMain] INFO  com.vijay.McpHostApplication - Started McpHostApplication in 5.315 seconds (process running for 606.167)
+2025-09-03 14:22:16.070 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-09-03 14:22:18.689 [tomcat-handler-0] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-03 14:22:18.689 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-03 14:22:18.692 [tomcat-handler-0] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-09-03 14:22:18.723 [tomcat-handler-0] INFO  c.v.controller.ChatBoatController - Received async chat request with Virtual Threads - provider: gemini, model: gemini-1.5-flash
+2025-09-03 14:22:18.755 [virtual-328] INFO  c.v.service.VirtualThreadChatService - Processing chat request with Virtual Thread for conversation: 7D658C61A2231086C66ABCBE47AFA900
+2025-09-03 14:22:18.758 [virtual-328] INFO  c.vijay.service.impl.ChatServiceImpl - Processing chat request for conversation: 7D658C61A2231086C66ABCBE47AFA900
+2025-09-03 14:22:18.760 [virtual-328] INFO  c.v.service.impl.AIClientServiceImpl - Getting ChatClient for provider: gemini, model: gemini-1.5-flash, hasCustomApiKey: false, hasCustomBaseUrl: false
+2025-09-03 14:22:18.761 [virtual-328] INFO  c.v.service.impl.AIClientServiceImpl - Using default Gemini client
+2025-09-03 14:22:21.105 [virtual-328] INFO  c.vijay.service.impl.ChatServiceImpl - Successfully generated response for conversation: 7D658C61A2231086C66ABCBE47AFA900
+2025-09-03 14:22:21.106 [virtual-328] INFO  c.v.service.VirtualThreadChatService - Successfully processed chat request with Virtual Thread for conversation: 7D658C61A2231086C66ABCBE47AFA900
+2025-09-03 14:22:21.106 [virtual-328] INFO  c.v.controller.ChatBoatController - Successfully processed async chat request for conversation: 7D658C61A2231086C66ABCBE47AFA900
+2025-09-03 14:22:30.941 [tomcat-handler-2] INFO  c.v.controller.ChatBoatController - Received chat request with provider: gemini, model: gemini-1.5-flash, hasApiKey: false, hasBaseUrl: false
+2025-09-03 14:22:30.942 [tomcat-handler-2] INFO  c.vijay.service.ResilientChatService - Processing resilient chat request for conversation: C299E13CE8D59C8BA445FEC2FE8D7F7B
+2025-09-03 14:22:30.943 [ForkJoinPool.commonPool-worker-4] INFO  c.vijay.service.impl.ChatServiceImpl - Processing chat request for conversation: C299E13CE8D59C8BA445FEC2FE8D7F7B
+2025-09-03 14:22:30.943 [ForkJoinPool.commonPool-worker-4] INFO  c.v.service.impl.AIClientServiceImpl - Getting ChatClient for provider: gemini, model: gemini-1.5-flash, hasCustomApiKey: false, hasCustomBaseUrl: false
+2025-09-03 14:22:30.943 [ForkJoinPool.commonPool-worker-4] INFO  c.v.service.impl.AIClientServiceImpl - Using default Gemini client
+2025-09-03 14:22:32.121 [ForkJoinPool.commonPool-worker-4] INFO  c.vijay.service.impl.ChatServiceImpl - Successfully generated response for conversation: C299E13CE8D59C8BA445FEC2FE8D7F7B
+2025-09-03 14:22:32.122 [tomcat-handler-2] INFO  c.v.controller.ChatBoatController - Successfully processed chat request for conversation: C299E13CE8D59C8BA445FEC2FE8D7F7B
+2025-09-03 14:23:16.162 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-03 14:23:16.165 [Thread-49] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-03 14:23:16.165 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:23:16.184 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-09-03 14:23:16.185 [Thread-49] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:23:16.188 [loomBoundedElastic-10] DEBUG i.m.c.transport.StdioClientTransport - Initiating graceful shutdown
+2025-09-03 14:23:16.289 [parallel-6] DEBUG i.m.c.transport.StdioClientTransport - Sending TERM to process
+2025-09-03 14:23:16.289 [ForkJoinPool.commonPool-worker-4] WARN  i.m.c.transport.StdioClientTransport - Process terminated with code 1
+2025-09-03 14:23:16.290 [restartedMain] INFO  com.vijay.McpHostApplication - Starting McpHostApplication using Java 24.0.1 with PID 21468 (E:\ai_projects\MCP_apps\mcp-host\target\classes started by Admin in E:\ai_projects\MCP_apps\mcp-host)
+2025-09-03 14:23:16.290 [ForkJoinPool.commonPool-worker-4] DEBUG i.m.c.transport.StdioClientTransport - Graceful shutdown completed
+2025-09-03 14:23:16.290 [restartedMain] INFO  com.vijay.McpHostApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-03 14:23:16.869 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-03 14:23:16.869 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-03 14:23:16.874 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-09-03 14:23:17.116 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-03 14:23:17.116 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:23:17.117 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-03 14:23:17.117 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03 14:23:17.140 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-03 14:23:17.141 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 849 ms
+2025-09-03 14:23:20.617 [pool-30-thread-1] INFO  i.m.client.McpAsyncClient - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AI_Coding_Assistant, version=1.13.1] and Instructions null
+2025-09-03 14:23:20.637 [pool-32-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:23:20.646 [pool-32-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:23:20.836 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Gemini Chat Client
+2025-09-03 14:23:20.838 [pool-32-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:23:20.897 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Ollama Chat Client
+2025-09-03 14:23:20.901 [pool-32-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:23:20.923 [restartedMain] INFO  com.vijay.service.CachedToolService - Generating tool list for system prompt (cache miss)
+2025-09-03 14:23:20.933 [pool-32-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:23:20.943 [restartedMain] INFO  com.vijay.service.CachedToolService - Counting tools from MCP servers (cache miss)
+2025-09-03 14:23:20.945 [pool-32-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:23:20.949 [restartedMain] INFO  com.vijay.config.SystemPromptConfig - Generated system prompt with 41 tools
+2025-09-03 14:23:22.803 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-09-03 14:23:22.818 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-09-03 14:23:22.871 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:23:22.873 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-09-03 14:23:22.884 [restartedMain] INFO  com.vijay.McpHostApplication - Started McpHostApplication in 6.629 seconds (process running for 672.983)
+2025-09-03 14:23:22.886 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-09-03 14:30:52.589 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-09-03 14:30:52.591 [Thread-61] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-03 14:30:52.592 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:30:52.611 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-09-03 14:30:52.612 [Thread-61] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:30:52.615 [loomBoundedElastic-12] DEBUG i.m.c.transport.StdioClientTransport - Initiating graceful shutdown
+2025-09-03 14:30:52.741 [restartedMain] INFO  com.vijay.McpHostApplication - Starting McpHostApplication using Java 24.0.1 with PID 21468 (E:\ai_projects\MCP_apps\mcp-host\target\classes started by Admin in E:\ai_projects\MCP_apps\mcp-host)
+2025-09-03 14:30:52.742 [restartedMain] INFO  com.vijay.McpHostApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-03 14:30:53.378 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-03 14:30:53.378 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-03 14:30:53.384 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-09-03 14:30:53.797 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-03 14:30:53.797 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:30:53.799 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-03 14:30:53.799 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03 14:30:53.837 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-03 14:30:53.837 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1092 ms
+2025-09-03 14:30:56.521 [pool-35-thread-1] INFO  i.m.client.McpAsyncClient - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AI_Coding_Assistant, version=1.13.1] and Instructions null
+2025-09-03 14:30:56.754 [pool-37-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:30:56.774 [pool-37-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:30:56.776 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-09-03 14:30:56.867 [restartedMain] INFO  com.vijay.McpHostApplication - Starting McpHostApplication using Java 24.0.1 with PID 24252 (E:\ai_projects\MCP_apps\mcp-host\target\classes started by Admin in E:\ai_projects\MCP_apps\mcp-host)
+2025-09-03 14:30:56.869 [restartedMain] INFO  com.vijay.McpHostApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-03 14:30:56.975 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-03 14:30:56.975 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-03 14:30:57.252 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Gemini Chat Client
+2025-09-03 14:30:57.258 [pool-37-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:30:57.418 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Ollama Chat Client
+2025-09-03 14:30:57.422 [pool-37-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:30:57.436 [restartedMain] INFO  com.vijay.service.CachedToolService - Generating tool list for system prompt (cache miss)
+2025-09-03 14:30:57.441 [pool-37-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:30:57.453 [restartedMain] INFO  com.vijay.service.CachedToolService - Counting tools from MCP servers (cache miss)
+2025-09-03 14:30:57.456 [pool-37-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:30:57.461 [restartedMain] INFO  com.vijay.config.SystemPromptConfig - Generated system prompt with 41 tools
+2025-09-03 14:30:59.353 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-03 14:30:59.358 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-03 14:30:59.403 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2025-09-03 14:30:59.582 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-09-03 14:30:59.610 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-09-03 14:30:59.709 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:30:59.723 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-09-03 14:30:59.757 [restartedMain] INFO  com.vijay.McpHostApplication - Started McpHostApplication in 7.062 seconds (process running for 1129.857)
+2025-09-03 14:30:59.763 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-09-03 14:31:01.011 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-09-03 14:31:01.016 [Thread-73] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-03 14:31:01.018 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:31:01.037 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-09-03 14:31:01.038 [Thread-73] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:31:01.039 [loomBoundedElastic-14] DEBUG i.m.c.transport.StdioClientTransport - Initiating graceful shutdown
+2025-09-03 14:31:01.184 [restartedMain] INFO  com.vijay.McpHostApplication - Starting McpHostApplication using Java 24.0.1 with PID 21468 (E:\ai_projects\MCP_apps\mcp-host\target\classes started by Admin in E:\ai_projects\MCP_apps\mcp-host)
+2025-09-03 14:31:01.184 [restartedMain] INFO  com.vijay.McpHostApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-03 14:31:01.273 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-03 14:31:01.298 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:31:01.301 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-03 14:31:01.301 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03 14:31:01.391 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-03 14:31:01.391 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4416 ms
+2025-09-03 14:31:02.282 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-03 14:31:02.282 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-03 14:31:02.289 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2025-09-03 14:31:02.886 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-03 14:31:02.889 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:31:02.891 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-03 14:31:02.893 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-03 14:31:02.994 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-03 14:31:02.998 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1811 ms
+2025-09-03 14:31:05.215 [pool-2-thread-1] INFO  i.m.client.McpAsyncClient - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AI_Coding_Assistant, version=1.13.1] and Instructions null
+2025-09-03 14:31:05.303 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:31:05.433 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:31:06.217 [pool-40-thread-1] INFO  i.m.client.McpAsyncClient - Server response with Protocol: 2024-11-05, Capabilities: ServerCapabilities[completions=null, experimental={}, logging=null, prompts=PromptCapabilities[listChanged=false], resources=ResourceCapabilities[subscribe=false, listChanged=false], tools=ToolCapabilities[listChanged=false]], Info: Implementation[name=AI_Coding_Assistant, version=1.13.1] and Instructions null
+2025-09-03 14:31:06.258 [pool-42-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:31:06.274 [pool-42-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:31:06.628 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Gemini Chat Client
+2025-09-03 14:31:06.661 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:31:07.228 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Gemini Chat Client
+2025-09-03 14:31:07.234 [pool-42-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:31:07.360 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Ollama Chat Client
+2025-09-03 14:31:07.365 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:31:07.368 [restartedMain] INFO  com.vijay.config.ChatConfig - Creating Ollama Chat Client
+2025-09-03 14:31:07.371 [pool-42-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:31:07.412 [restartedMain] INFO  com.vijay.service.CachedToolService - Generating tool list for system prompt (cache miss)
+2025-09-03 14:31:07.414 [pool-42-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:31:07.429 [restartedMain] INFO  com.vijay.service.CachedToolService - Counting tools from MCP servers (cache miss)
+2025-09-03 14:31:07.432 [pool-42-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:31:07.438 [restartedMain] INFO  com.vijay.config.SystemPromptConfig - Generated system prompt with 41 tools
+2025-09-03 14:31:07.485 [restartedMain] INFO  com.vijay.service.CachedToolService - Generating tool list for system prompt (cache miss)
+2025-09-03 14:31:07.490 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:31:07.631 [restartedMain] INFO  com.vijay.service.CachedToolService - Counting tools from MCP servers (cache miss)
+2025-09-03 14:31:07.635 [pool-5-thread-1] INFO  i.m.c.transport.StdioClientTransport - STDERR Message received: Processing request of type ListToolsRequest
+2025-09-03 14:31:07.652 [restartedMain] INFO  com.vijay.config.SystemPromptConfig - Generated system prompt with 41 tools
+2025-09-03 14:31:12.173 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-09-03 14:31:12.201 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-09-03 14:31:12.344 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:31:12.356 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-09-03 14:31:12.388 [restartedMain] INFO  com.vijay.McpHostApplication - Started McpHostApplication in 11.27 seconds (process running for 1142.488)
+2025-09-03 14:31:12.394 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-09-03 14:31:12.879 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-09-03 14:31:12.924 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-09-03 14:31:13.108 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-09-03 14:31:13.133 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-09-03 14:31:13.146 [loomBoundedElastic-2] DEBUG i.m.c.transport.StdioClientTransport - Initiating graceful shutdown
+2025-09-03 14:31:13.250 [parallel-6] DEBUG i.m.c.transport.StdioClientTransport - Sending TERM to process
+2025-09-03 14:31:13.255 [parallel-6] WARN  i.m.c.transport.StdioClientTransport - Process terminated with code 1
+2025-09-03 14:31:13.264 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-03 14:31:13.277 [parallel-6] DEBUG i.m.c.transport.StdioClientTransport - Graceful shutdown completed
+2025-09-03 14:31:13.321 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+

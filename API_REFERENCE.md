@@ -6,7 +6,7 @@
 
 ## 📋 Core Chat Endpoints
 
-### 1. Process Chat Request
+### 1. Process Chat Request (Regular)
 ```http
 POST /api/ai/chat
 Content-Type: application/json
@@ -26,11 +26,37 @@ Content-Type: application/json
 {
   "provider": "gemini",
   "model": "gemini-1.5-flash",
-  "response": "Hello! I'm an AI coding assistant with access to 43 tools..."
+  "answer": "Hello! I'm an AI coding assistant with access to 43 tools..."
 }
 ```
 
-### 2. Get Available Providers
+### 2. Process Chat Request (Async with Virtual Threads)
+```http
+POST /api/ai/chat/async
+Content-Type: application/json
+
+{
+  "message": "Hello, how can you help me?",
+  "provider": "gemini",
+  "model": "gemini-1.5-flash",
+  "apiKey": "optional-custom-key",
+  "baseUrl": "optional-custom-url",
+  "conversationId": "optional-conversation-id"
+}
+```
+
+**Response:**
+```json
+{
+  "provider": "gemini",
+  "model": "gemini-1.5-flash",
+  "answer": "Hello! I'm an AI coding assistant with access to 43 tools..."
+}
+```
+
+**Note:** The `/chat/async` endpoint uses Virtual Threads for better performance and can handle thousands of concurrent requests.
+
+### 3. Get Available Providers
 ```http
 GET /api/ai/providers
 ```
@@ -40,7 +66,7 @@ GET /api/ai/providers
 ["gemini", "ollama"]
 ```
 
-### 3. Get Available Models
+### 4. Get Available Models
 ```http
 GET /api/ai/models?provider=gemini
 ```
@@ -48,6 +74,100 @@ GET /api/ai/models?provider=gemini
 **Response:**
 ```json
 ["gemini-1.5-flash", "gemini-1.5-pro"]
+```
+
+## 🧵 Virtual Threads Endpoints
+
+### 1. Process Chat with Virtual Threads
+```http
+POST /api/virtual-threads/chat
+Content-Type: application/json
+
+{
+  "message": "Hello, how can you help me?",
+  "provider": "gemini",
+  "model": "gemini-1.5-flash"
+}
+```
+
+**Response:**
+```json
+{
+  "provider": "gemini",
+  "model": "gemini-1.5-flash",
+  "response": "Hello! I'm an AI coding assistant with access to 43 tools..."
+}
+```
+
+### 2. Process Multiple Chats Concurrently
+```http
+POST /api/virtual-threads/chat/batch
+Content-Type: application/json
+
+[
+  {
+    "message": "What tools do you have?",
+    "provider": "gemini",
+    "model": "gemini-1.5-flash"
+  },
+  {
+    "message": "How can you help with coding?",
+    "provider": "gemini",
+    "model": "gemini-1.5-flash"
+  }
+]
+```
+
+**Response:**
+```json
+{
+  "totalRequests": 2,
+  "responses": [
+    {
+      "provider": "gemini",
+      "model": "gemini-1.5-flash",
+      "response": "I have 43 tools available..."
+    },
+    {
+      "provider": "gemini",
+      "model": "gemini-1.5-flash",
+      "response": "I can help with coding in many ways..."
+    }
+  ],
+  "conversationIds": ["uuid1", "uuid2"],
+  "message": "All requests processed concurrently with Virtual Threads"
+}
+```
+
+### 3. Get Virtual Thread Information
+```http
+GET /api/virtual-threads/info
+```
+
+**Response:**
+```json
+{
+  "virtualThreadInfo": "Virtual Thread Info:\n- Thread Name: VirtualThread-1\n- Is Virtual: true\n- Thread ID: 12345\n- Thread Group: main\n- Priority: 5\n- State: RUNNABLE",
+  "currentThread": "http-nio-8080-exec-1",
+  "isVirtual": false,
+  "timestamp": 1756886259915
+}
+```
+
+### 4. Test Virtual Threads Concurrency
+```http
+POST /api/virtual-threads/test/concurrency?requestCount=50
+```
+
+**Response:**
+```json
+{
+  "requestCount": 50,
+  "duration": "2500 ms",
+  "averageTimePerRequest": "50.0 ms",
+  "successfulRequests": 50,
+  "message": "Virtual Threads concurrency test completed"
+}
 ```
 
 ## 📊 Monitoring Endpoints

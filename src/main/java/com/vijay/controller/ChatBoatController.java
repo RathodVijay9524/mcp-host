@@ -3,12 +3,15 @@ package com.vijay.controller;
 import com.vijay.model.ChatRequest;
 import com.vijay.model.ChatResponse;
 import com.vijay.service.ResilientChatService;
+import com.vijay.service.VirtualThreadChatService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.concurrent.CompletableFuture;
 
 @RestController
 @RequestMapping("/api/ai")
@@ -18,9 +21,11 @@ class ChatBoatController {
     private static final Logger logger = LoggerFactory.getLogger(ChatBoatController.class);
 
     private final ResilientChatService resilientChatService;
+    private final VirtualThreadChatService virtualThreadChatService;
 
-    ChatBoatController(ResilientChatService resilientChatService) {
+    ChatBoatController(ResilientChatService resilientChatService, VirtualThreadChatService virtualThreadChatService) {
         this.resilientChatService = resilientChatService;
+        this.virtualThreadChatService = virtualThreadChatService;
     }
 
 
@@ -54,6 +59,42 @@ class ChatBoatController {
             logger.error("Error processing chat request: {}", e.getMessage(), e);
             return ResponseEntity.status(500)
                     .body(new ChatResponse("error", "", "Internal Server Error: " + e.getMessage()));
+        }
+    }
+
+    /**
+     * Async chat endpoint using Virtual Threads
+     * Same API as /chat but with Virtual Threads for better performance
+     */
+    @PostMapping("/chat/async")
+    public CompletableFuture<ResponseEntity<ChatResponse>> chatAsync(@Valid @RequestBody ChatRequest req,
+                                                                     HttpServletRequest http) {
+        
+        logger.info("Received async chat request with Virtual Threads - provider: {}, model: {}",
+                req.getProvider(), req.getModel());
+
+        try {
+            // Generate conversation ID
+            String conversationId = (req.getConversationId() != null && !req.getConversationId().isBlank())
+                    ? req.getConversationId()
+                    : http.getSession(true).getId();
+
+            // Process the chat request using Virtual Threads
+            return virtualThreadChatService.processChatAsync(req, conversationId)
+                    .thenApply(response -> {
+                        logger.info("Successfully processed async chat request for conversation: {}", conversationId);
+                        return ResponseEntity.ok(response);
+                    })
+                    .exceptionally(throwable -> {
+                        logger.error("Error processing async chat request: {}", throwable.getMessage(), throwable);
+                        return ResponseEntity.status(500)
+                                .body(new ChatResponse("error", "", "Internal Server Error: " + throwable.getMessage()));
+                    });
+            
+        } catch (Exception e) {
+            logger.error("Error setting up async chat request: {}", e.getMessage(), e);
+            return CompletableFuture.completedFuture(ResponseEntity.status(500)
+                    .body(new ChatResponse("error", "", "Internal Server Error: " + e.getMessage())));
         }
     }
     
